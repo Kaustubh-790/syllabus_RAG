@@ -202,8 +202,6 @@ flowchart LR
 | **PyPDF2/pdfplumber** | Open Source | N/A                      | **0**        | PDF parsing    |
 |                       |             | **TOTAL**                | **0/month**  |                |
 
-## 🛠️ Technology Stack
-
 ### Core Technologies
 
 ```mermaid
