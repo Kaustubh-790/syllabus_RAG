@@ -1,14 +1,16 @@
-import PyPDF2
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+import pdfplumber
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 def parse_pdf(file):
     """
-    Extracts text from a PDF file interactively.
+    Extracts text from a PDF file using pdfplumber.
     """
-    pdf_reader = PyPDF2.PdfReader(file)
-    text = ""
-    for page in pdf_reader.pages:
-        text += page.extract_text()
+    with pdfplumber.open(file) as pdf:
+        text = ""
+        for page in pdf.pages:
+            extracted = page.extract_text()
+            if extracted:
+                text += extracted + "\n"
     return text
 
 def chunk_text(text, chunk_size=500, chunk_overlap=50):

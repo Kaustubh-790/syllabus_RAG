@@ -3,7 +3,7 @@ from pinecone import Pinecone, ServerlessSpec
 from sentence_transformers import SentenceTransformer
 import streamlit as st
 
-# Initialize Pinecone
+
 def initialize_pinecone():
     api_key = st.secrets["PINECONE_API_KEY"]
     pc = Pinecone(api_key=api_key)
@@ -21,7 +21,7 @@ def initialize_pinecone():
         )
     return pc.Index(index_name)
 
-# Initialize Embedding Model
+
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 def create_embeddings(chunks):
@@ -43,7 +43,7 @@ def upsert_vectors(index, chunks, embeddings):
             "metadata": {"text": chunk}
         })
     
-    # Upsert in batches of 100
+
     batch_size = 100
     for i in range(0, len(vectors), batch_size):
         batch = vectors[i:i+batch_size]

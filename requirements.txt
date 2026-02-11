@@ -1,8 +1,8 @@
 streamlit
-pypdf2
+pdfplumber
 langchain
 langchain-community
-pinecone-client
+pinecone
 sentence-transformers
 groq
 python-dotenv
