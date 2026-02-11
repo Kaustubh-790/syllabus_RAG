@@ -9,6 +9,10 @@
 
 ---
 
+## Live Demo
+
+[https://syllabusrag-sukhsvhzdd3ktjvgamffbv.streamlit.app/](https://syllabusrag-sukhsvhzdd3ktjvgamffbv.streamlit.app/)
+
 ## Overview
 
 **Talk-to-Syllabus** is a Retrieval-Augmented Generation (RAG) system that allows students to upload course syllabi in PDF format and ask natural language questions about:

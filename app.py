@@ -15,7 +15,6 @@ if "messages" not in st.session_state:
 if "pinecone_index" not in st.session_state:
     try:
         st.session_state.pinecone_index = vector_store.initialize_pinecone()
-        st.success("Connected to Pinecone!")
     except Exception as e:
         st.error(f"Failed to connect to Pinecone: {e}")
 
